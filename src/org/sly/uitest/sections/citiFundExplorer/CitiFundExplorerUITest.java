@@ -46,7 +46,7 @@ public class CitiFundExplorerUITest extends AbstractTest {
 	String UrlForThailandPlatform = Settings.BASE_URL
 			+ "?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=THA";
 	
-	/*Commentsss*/
+	/*Commentss*/
 	
 	@Test
 	public void testDifferentRegionPlatform() {
@@ -68,7 +68,7 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		
 		try{
 			wait(3);
-		System.out.println("TC 2 : City Fund Explorer UI Tests Started ! ");
+		System.out.println("TC 2 : City Fund Explorer UI Tests have Started ! ");
 		webDriver.get(UrlForSingaporeIPBPlatform);
 		waitForElementVisible(By.id("gwt-debug-MyMainBasicView-logoPanel"), 30);
 		System.out.println("User can login to"+UrlForSingaporeIPBPlatform+"Sucessfully");
