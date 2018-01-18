@@ -76,7 +76,7 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		catch(Exception e){  
 			System.out.println(e);
 		}
-		System.out.println("TC 2 Ended !");
+		System.out.println("TC 2 is Ended !");
 		
 		
 		try { wait(3);
