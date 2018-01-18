@@ -46,7 +46,7 @@ public class CitiFundExplorerUITest extends AbstractTest {
 	String UrlForThailandPlatform = Settings.BASE_URL
 			+ "?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=THA";
 	
-	
+	/*Comments*/
 	
 	@Test
 	public void testDifferentRegionPlatform() {
@@ -104,7 +104,7 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		System.out.println("TC 4 Ended !");
 	} 
 
-	// test case #5
+	// test case #5 
 	@Test
 	public void testCompareFund() throws InterruptedException {
 
