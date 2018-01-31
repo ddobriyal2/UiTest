@@ -1,0 +1,7 @@
+2018-01-23 14:39:25 INFO  CitiFundExplorerUITest:93 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-01-23 14:40:03 INFO  CitiFundExplorerUITest:103 - TC 1 Failed , please see the screen shot attached in zephyr
+2018-01-23 14:40:03 INFO  CitiFundExplorerUITest:106 - TC 1 Ended !
+2018-01-26 17:50:41 INFO  CitiFundExplorerUITest:90 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:93 - User can login tohttp://192.168.1.107:8080/SlyAWS/?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=HKGSucessfully
+2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:94 - TC 1 Passed
+2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
