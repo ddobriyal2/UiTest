@@ -5,22 +5,37 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.EOFException;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.sly.uitest.framework.AbstractTest;
+import org.sly.uitest.utils.*;
+
 import org.sly.uitest.pageobjects.abstractpage.LoginPage;
 import org.sly.uitest.pageobjects.admin.AdminEditPage;
 import org.sly.uitest.settings.Settings;
+
+
 
 
 /**
@@ -43,10 +58,28 @@ public class CitiFundExplorerUITest extends AbstractTest {
 	String UrlForSingaporeGCGPlatform = Settings.BASE_URL
 			+ "?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=SGPGCG";
 
-	String UrlForThailandPlatform = Settings.BASE_URL
-			+ "?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=THA";
+	String UrlForThailandPlatform = Settings.BASE_URL+ "?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=THA";
+	
+	 //Logger logger=Logger.getLogger("CitiFundExplorerUITest");
+     
+	 
+     // configure log4j properties file
+     //PropertyConfigurator.configure("log4j.properties");
+     
+private static final Logger logger = Logger.getLogger(CitiFundExplorerUITest.class.getName());
+	
+	
+	@Before
+		public void loadlog4J(){
+			String log4jConfPath = System.getProperty("user.dir")+"/log4j.properties";
+			PropertyConfigurator.configure(log4jConfPath);
+		}
+	
+	
 	
 	/*Commentss*/
+	
+	
 	
 	@Test
 	public void testDifferentRegionPlatform() {
@@ -54,56 +87,75 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		// test case #1 - 4
 
 		try{
-			System.out.println("TC 1 : City Fund Explorer UI Tests Started ! ");
+		logger.info("TC 1 : City Fund Explorer UI Tests Started ! ");	
 		webDriver.get(UrlForHongKongPlatform);	
 		waitForElementVisible(By.id("gwt-debug-MyMainBasicView-logoPanel"), 30);
-		System.out.println("User can login to"+UrlForHongKongPlatform+"Sucessfully");
+	    logger.info("User can login to"+UrlForHongKongPlatform+"Sucessfully");
+	    logger.info("TC 1 Passed");
+	    
+	    
 		}
 		catch(Exception e){  
 			System.out.println(e);
+			screenshot();
+		    logger.info("TC 1 Failed , please see the screen shot attached in zephyr");
+		   
 		}
+		logger.info("TC 1 Ended !");
 		
-		System.out.println("TC 1 Ended !");
 		
 		
 		try{
 			wait(3);
-		System.out.println("TC 2 : City Fund Explorer UI Tests have Started ! ");
+			logger.info("TC 2 : City Fund Explorer UI Tests have Started ! ");
+		
 		webDriver.get(UrlForSingaporeIPBPlatform);
 		waitForElementVisible(By.id("gwt-debug-MyMainBasicView-logoPanel"), 30);
+		screenshot();
 		System.out.println("User can login to"+UrlForSingaporeIPBPlatform+"Sucessfully");
 		}
 		catch(Exception e){  
 			System.out.println(e);
+			logger.info("TC 1 Failed , please see the screen shot attached in zephyr");
 		}
-		System.out.println("TC 2 is Ended !");
+		logger.info("TC 2 is Ended !");
+		
 		
 		
 		try { wait(3);
-		System.out.println("TC 3 : City Fund Explorer UI Tests Started ! ");
+		logger.info("TC 3 : City Fund Explorer UI Tests Started ! ");
+		System.out.println();
 		webDriver.get(UrlForSingaporeGCGPlatform);
 		waitForElementVisible(By.id("gwt-debug-MyMainBasicView-logoPanel"), 30);
+		screenshot();
 		System.out.println("User can login to"+UrlForSingaporeGCGPlatform+"Sucessfully");
 		}
 		catch(Exception e){  
 			System.out.println(e);
+			logger.info("TC 1 Failed , please see the screen shot attached in zephyr");
 		}
-		System.out.println("TC 3 Ended !");
+		logger.info("TC 3 Ended !");
+		
 		
 		
 		try{
 		wait(3);
-		System.out.println("TC 4 : City Fund Explorer UI Tests Started ! ");
+		logger.info("TC 4 : City Fund Explorer UI Tests Started ! ");
+		
 		webDriver.get(UrlForThailandPlatform);
 		waitForElementVisible(By.id("gwt-debug-MyMainBasicView-logoPanel"), 30);
+		screenshot();
 		System.out.println("User can login to"+UrlForThailandPlatform+"Sucessfully");
 		}
 		catch(Exception e){  
 			System.out.println(e);
+			screenshot();
+			logger.info("TC 4 Failed , please see the screen shot attached in zephyr");
 		}
-		System.out.println("TC 4 Ended !");
+		logger.info("TC 4 Ended !");
+		
 	} 
-
+	
 	// test case #5 
 	@Test
 	public void testCompareFund() throws InterruptedException {
@@ -485,8 +537,8 @@ public class CitiFundExplorerUITest extends AbstractTest {
 	 * check the details of investment
 	 * 
 	 * @param numberOfInvestment
-	 *            investment name to be clicked
-	 */
+	 *            investment name to be clicked*/
+	 
 	public void clickInvestment(String numberOfInvestment) {
 		clickElement(By.xpath("(.//*[@id='gwt-debug-ManagerListItem-strategyName'])[" + numberOfInvestment + "]"));
 
@@ -501,8 +553,8 @@ public class CitiFundExplorerUITest extends AbstractTest {
 
 	}
 
-	/*
-	 * filter result by criteria
+	
+	/* * filter result by criteria
 	 * 
 	 * @param numberOfColumn
 	 *            1: Asset Class 2: Region 3: Currencies
@@ -553,8 +605,8 @@ public class CitiFundExplorerUITest extends AbstractTest {
 
 	}
 
-	/*
-	 * do advanced search
+	
+	 /* do advanced search
 	 * 
 	 * @param field
 	 *            field from the advacned search panel,including Investment
@@ -562,8 +614,9 @@ public class CitiFundExplorerUITest extends AbstractTest {
 	 * @param keyword
 	 *            keyword for advanced search
 	 * @param expectedResult
-	 *            expected result for the advanced search
+	             expected result for the advanced search
 	 */
+	
 	public void advancedSearch(String field, String keyword, String expectedResult) {
 		waitForElementVisible(By.id("gwt-debug-ManagerListWidgetView-advancedSearchBtn"), 30);
 
@@ -619,13 +672,13 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		}
 	}
 
-	/*
-	 * Remove favourite from the favourite investment list
+	
+	 /* Remove favourite from the favourite investment list
 	 * 
 	 * @param list
 	 *            ArrayList of favorite investment
-	 * @return
-	 */
+	  @return*/
+	 
 	public String removeFavourite(ArrayList<String> list) {
 
 		this.clickShowFavouriteCheckbox(true);
@@ -651,13 +704,13 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		return investmentToBeRemoved;
 	}
 
-	/*
-	 * change the number of search result. it is at the bottom of page and
+	
+/*	 * change the number of search result. it is at the bottom of page and
 	 * includes few option: 15 ,25 ,50
 	 * 
 	 * @param number
-	 *            number of search result
-	 */
+	 *            number of search result*/
+	 
 	public void changeNumberOfSearchResult(String number) {
 
 		clickElement(By.xpath(".//button[.='" + number + "']"));
@@ -674,14 +727,14 @@ public class CitiFundExplorerUITest extends AbstractTest {
 		assertTrue(Integer.valueOf(number).equals(size));
 	}
 
-	/*
-	 * click previous or next page for the search result
+	
+	/* * click previous or next page for the search result
 	 * 
 	 * @param next
 	 *            next is a boolean indicating that: if true, next page button
 	 *            will be clicked. if false, previous page button will be
-	 *            clicked.
-	 */
+	 *            clicked.*/
+	 
 	public void changePageOfSearchResult(boolean next) {
 		By locator = null;
 		if (next) {

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.Calendar;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -17,7 +18,7 @@ import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+
 import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
@@ -27,6 +28,8 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -35,6 +38,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.MethodRule;
 import org.junit.rules.TestName;
 import org.junit.runners.model.FrameworkMethod;
@@ -63,7 +67,13 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sly.uitest.pageobjects.abstractpage.LoginPage;
+
 import org.sly.uitest.settings.Settings;
+//import org.sly.uitest.utils.TestBase;
+
+
+
+
 
 /**
  * Abstract class to be extended by all test classes.
@@ -102,14 +112,23 @@ public class AbstractTest {
 	protected final String financesalesURL = Settings.NORTHSTAR_URL;
 
 	/** Suffix for screenshots. */
+	
 	protected String screenshotSuffix = "abstract";
-
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * JUnit Rule that will record the test name of the current test. This is
 	 * referenced when creating the {@link DesiredCapabilities}, so the Sauce
 	 * Job is created with the test name.
 	 */
 	public @Rule TestName testName = new TestName();
+	
+	
 
 	@Before
 	public void setUp() throws Exception {
@@ -1324,6 +1343,7 @@ public class AbstractTest {
 	}
 
 	/** Takes a screenshot of the current page and saves it with a datestamp. */
+	
 	public void screenshot() {
 		screenshot(screenshotSuffix);
 	}
@@ -1334,6 +1354,7 @@ public class AbstractTest {
 	 * @param label
 	 */
 	public void screenshot(String label) {
+		System.out.println("gkujhhjjj ");
 		if (!Settings.TAKE_SCREENSHOTS)
 			return;
 

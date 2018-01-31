@@ -44,6 +44,7 @@ public class AccessTokenTest extends AbstractPage {
 
 		} catch (org.openqa.selenium.TimeoutException e) {
 			assertTrue(pageContainsStr("Investments"));
+			screenshot();
 		}
 
 	}
@@ -58,6 +59,7 @@ public class AccessTokenTest extends AbstractPage {
 		} catch (org.openqa.selenium.TimeoutException e) {
 			assertTrue(pageContainsStr("Error"));
 			assertTrue(pageContainsStr("Invalid access token."));
+			screenshot();
 		}
 
 	}

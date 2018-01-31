@@ -32,6 +32,7 @@ public class LoginPage extends AbstractPage {
 
 			//checkLogout();
 		} catch (TimeoutException e) {
+			
 		}
 
 		// try {
@@ -40,7 +41,7 @@ public class LoginPage extends AbstractPage {
 		// } catch (Exception e) {
 		// checkLogout();
 		// }
-/*
+
 		boolean isMaterial = checkIfMaterial();
 
 		if (isMaterial) {
@@ -59,7 +60,7 @@ public class LoginPage extends AbstractPage {
 			// elem = waitGet(By
 			// .xpath("//*[@id=\"gwt-debug-LoginPanel-loginButton\"]"));
 		}
-*/
+
 		// elem.click();
 
 		// Waiting 30 seconds for an element to be present on the page,
@@ -118,14 +119,12 @@ public class LoginPage extends AbstractPage {
 	 * @return {@link LoginPage}
 	 */
 	public LoginPage typeUsername(String username) throws InterruptedException {
-		wait(10);
+		
 		
 		waitForElementVisible(By.id("gwt-debug-UserLoginView-emailAddress"), 10);
-	
-		
-
 		sendKeysToElement(By.id("gwt-debug-UserLoginView-emailAddress"), username);
-         
+		
+		
 		
 		try {
 			assertEquals(username, getTextByLocator(By.id("gwt-debug-UserLoginView-emailAddress")));
@@ -219,9 +218,13 @@ public class LoginPage extends AbstractPage {
 		try {
 			wait(1);
 			
-			WebElement elem = webDriver.findElement(By.xpath(".//*[.='log out' and @class='material-logout']"));
+		WebElement elem = webDriver.findElement(By.xpath(".//*[.='log out' and @class='material-logout']"));
+			
 			return new MenuBarPage(webDriver);
+			
+			
 		} catch (Exception e) {
+			wait(10);
 			typeUsername(username);
 			typePassword(password);
 			return submitLogin(username, password);

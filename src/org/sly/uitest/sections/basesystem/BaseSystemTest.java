@@ -125,7 +125,7 @@ public class BaseSystemTest extends AbstractTest {
 
 	}
 
-	/*@Test
+	@Test
 	public void testInvestorAccountWriteAccess() throws Exception {
 		// TODO - Use SeleniumTest
 
@@ -134,11 +134,11 @@ public class BaseSystemTest extends AbstractTest {
 		main.loginAs(Settings.USERNAME, Settings.PASSWORD).goToAccountOverviewPage()
 				.simpleSearchByString("Selenium Test").goToAccountHoldingsPageByName("Selenium Test").goToDetailsPage()
 				.goToEditPageByField("Access Rights");
-		*//**
+		/**//**
 		 * Changes added due to new Access Right view. Related Jira OUTIND-27
 		 * Changes made by Kailash
 		 *//*
-		try {
+*/		try {
 			waitForElementVisible(
 					By.xpath(
 							"//div[.='Selenium Consultant']/following::input[@id='gwt-debug-AccessRightsPresenter-writeAccessCheckBox-input'][1]"),
@@ -219,11 +219,11 @@ public class BaseSystemTest extends AbstractTest {
 		main.loginAs(Settings.USERNAME, Settings.PASSWORD).goToAccountOverviewPage()
 				.simpleSearchByString("Selenium Test").goToAccountHoldingsPageByName("Selenium Test").goToDetailsPage()
 				.goToEditPageByField("Access Rights");
-		*//**
+		/**//**
 		 * Changes added due to new Access Right view. Related Jira OUTIND-27
 		 * Changes made by Kailash
 		 *//*
-		try {
+*/		try {
 			waitForElementVisible(
 					By.xpath(
 							"//div[.='Selenium Consultant']/following::input[@id='gwt-debug-AccessRightsPresenter-writeAccessCheckBox-input'][1]"),
@@ -592,7 +592,7 @@ public class BaseSystemTest extends AbstractTest {
 		// .id("gwt-debug-AdminUserEdit-editManagerSubmit"));
 		// wait(5);
 		// }
-/*
+
 		this.checkLogout();
 		handleAlert();
 
@@ -933,5 +933,5 @@ public class BaseSystemTest extends AbstractTest {
 		WebElement elem = waitGet(By.id("gwt-debug-MenuButtonHorizontal-menuButtonTop-" + TabName));
 
 		return elem;
-	}*/
+	}
 }
