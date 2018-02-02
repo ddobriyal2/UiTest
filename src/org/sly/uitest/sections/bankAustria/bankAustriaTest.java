@@ -28,7 +28,7 @@ import org.sly.uitest.settings.Settings;
  */
 public class bankAustriaTest extends AbstractTest {
 
-	// test case #1
+	// test case #one
 	@Test
 	public void testBankAustriaAccountLogin() throws InterruptedException {
 		String portalAddress = "http://192.168.1.107:8080/SlyAWS/ba.html";
