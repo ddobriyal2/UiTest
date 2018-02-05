@@ -75,7 +75,7 @@ import org.sly.uitest.sections.transactionreconciliation.TransactionReconciliati
 import org.sly.uitest.sections.transactionreconciliation.TransactionReconciliationUITest;
 import org.sly.uitest.sections.vfund.VFundTest;
 
-
+/*Regression Suite*/
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
