@@ -5,3 +5,45 @@
 2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:93 - User can login tohttp://192.168.1.107:8080/SlyAWS/?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=HKGSucessfully
 2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:94 - TC 1 Passed
 2018-01-26 17:50:53 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
+2018-02-05 15:57:38 INFO  CitiFundExplorerUITest:90 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-02-05 15:57:49 INFO  CitiFundExplorerUITest:93 - User can login tohttp://192.168.1.107:8080/SlyAWS/?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=HKGSucessfully
+2018-02-05 15:57:49 INFO  CitiFundExplorerUITest:94 - TC 1 Passed
+2018-02-05 15:57:50 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
+2018-02-05 15:57:53 INFO  CitiFundExplorerUITest:110 - TC 2 : City Fund Explorer UI Tests have Started ! 
+2018-02-05 15:57:53 INFO  CitiFundExplorerUITest:121 - TC 2 is Ended !
+2018-02-05 15:57:56 INFO  CitiFundExplorerUITest:126 - TC 3 : City Fund Explorer UI Tests Started ! 
+2018-02-05 15:57:56 INFO  CitiFundExplorerUITest:137 - TC 3 Ended !
+2018-02-05 15:57:59 INFO  CitiFundExplorerUITest:143 - TC 4 : City Fund Explorer UI Tests Started ! 
+2018-02-05 15:58:00 INFO  CitiFundExplorerUITest:155 - TC 4 Ended !
+2018-02-06 00:53:14 INFO  CitiFundExplorerUITest:90 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-02-06 00:58:14 INFO  CitiFundExplorerUITest:101 - TC 1 Failed , please see the screen shot attached in zephyr
+2018-02-06 00:58:14 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
+2018-02-06 00:58:17 INFO  CitiFundExplorerUITest:110 - TC 2 : City Fund Explorer UI Tests have Started ! 
+2018-02-06 01:03:17 INFO  CitiFundExplorerUITest:119 - TC 1 Failed , please see the screen shot attached in zephyr
+2018-02-06 01:03:17 INFO  CitiFundExplorerUITest:121 - TC 2 is Ended !
+2018-02-06 01:03:20 INFO  CitiFundExplorerUITest:126 - TC 3 : City Fund Explorer UI Tests Started ! 
+2018-02-06 01:08:20 INFO  CitiFundExplorerUITest:135 - TC 1 Failed , please see the screen shot attached in zephyr
+2018-02-06 01:08:20 INFO  CitiFundExplorerUITest:137 - TC 3 Ended !
+2018-02-06 01:08:23 INFO  CitiFundExplorerUITest:143 - TC 4 : City Fund Explorer UI Tests Started ! 
+2018-02-06 01:13:23 INFO  CitiFundExplorerUITest:153 - TC 4 Failed , please see the screen shot attached in zephyr
+2018-02-06 01:13:23 INFO  CitiFundExplorerUITest:155 - TC 4 Ended !
+2018-02-26 18:09:37 INFO  CitiFundExplorerUITest:90 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-02-26 18:09:49 INFO  CitiFundExplorerUITest:93 - User can login tohttp://192.168.1.107:8080/SlyAWS/?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=HKGSucessfully
+2018-02-26 18:09:49 INFO  CitiFundExplorerUITest:94 - TC 1 Passed
+2018-02-26 18:09:49 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
+2018-02-26 18:09:52 INFO  CitiFundExplorerUITest:110 - TC 2 : City Fund Explorer UI Tests have Started ! 
+2018-02-26 18:09:53 INFO  CitiFundExplorerUITest:121 - TC 2 is Ended !
+2018-02-26 18:09:56 INFO  CitiFundExplorerUITest:126 - TC 3 : City Fund Explorer UI Tests Started ! 
+2018-02-26 18:09:57 INFO  CitiFundExplorerUITest:137 - TC 3 Ended !
+2018-02-26 18:10:00 INFO  CitiFundExplorerUITest:143 - TC 4 : City Fund Explorer UI Tests Started ! 
+2018-02-26 18:10:00 INFO  CitiFundExplorerUITest:155 - TC 4 Ended !
+2018-02-27 01:06:35 INFO  CitiFundExplorerUITest:90 - TC 1 : City Fund Explorer UI Tests Started ! 
+2018-02-27 01:06:47 INFO  CitiFundExplorerUITest:93 - User can login tohttp://192.168.1.107:8080/SlyAWS/?locale=en&viewMode=BASIC#investmentList;P1=ce5fdc0e-0cdb-4e13-8ca9-11655d159e7c;P3=HKGSucessfully
+2018-02-27 01:06:47 INFO  CitiFundExplorerUITest:94 - TC 1 Passed
+2018-02-27 01:06:47 INFO  CitiFundExplorerUITest:104 - TC 1 Ended !
+2018-02-27 01:06:50 INFO  CitiFundExplorerUITest:110 - TC 2 : City Fund Explorer UI Tests have Started ! 
+2018-02-27 01:06:50 INFO  CitiFundExplorerUITest:121 - TC 2 is Ended !
+2018-02-27 01:06:53 INFO  CitiFundExplorerUITest:126 - TC 3 : City Fund Explorer UI Tests Started ! 
+2018-02-27 01:06:54 INFO  CitiFundExplorerUITest:137 - TC 3 Ended !
+2018-02-27 01:06:57 INFO  CitiFundExplorerUITest:143 - TC 4 : City Fund Explorer UI Tests Started ! 
+2018-02-27 01:06:58 INFO  CitiFundExplorerUITest:155 - TC 4 Ended !
