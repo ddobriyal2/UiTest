@@ -1354,7 +1354,7 @@ public class AbstractTest {
 	 * @param label
 	 */
 	public void screenshot(String label) {
-		System.out.println("gkujhhjjj ");
+		
 		if (!Settings.TAKE_SCREENSHOTS)
 			return;
 
