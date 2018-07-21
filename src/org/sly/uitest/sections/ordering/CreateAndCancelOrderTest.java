@@ -11,7 +11,7 @@ import org.sly.uitest.pageobjects.clientsandaccounts.RecentOrdersPage;
 import org.sly.uitest.settings.Settings;
 
 /**
- * @author Benny Leung..
+ * @author Benny Leung....
  * @date : 27 April, 2017
  * @company Prive Financial
  */
